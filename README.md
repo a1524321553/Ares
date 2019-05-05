@@ -64,6 +64,36 @@ We upload the details  in [evaluation_data/new_bugs](evaluation_data/new_bugs)
 
 Ares can be used with the following steps: 
 
-  - make sure that target project can be compiled by gcc, then using our build-capture tool to capture its build sequence automatically. The captured results are preprocessed by expanding the macros and in-lining header files which are shown in [evaluation_build_capture_Results](evaluation_data). Then using the captured results, we can generate the corresponding IR results which are shown in [evaluation_IR_Results](evaluation_data).
+  - make sure that target project can be compiled by clang-3.9, then using our build-capture tool to capture its build sequence automatically. The captured results are preprocessed by expanding the macros and in-lining header files which are shown in [evaluation_build_capture_Results](evaluation_data). Then using the captured results, we can generate the corresponding IR results which are shown in [evaluation_IR_Results](evaluation_data).
   - Trigger the major work of error specification mining. It first parses IR results into CFA and CG, then performs static analysis. Inferred specifications are written to the errspec.txt file which is shown in each project of [evaluation_data](evaluation_data).
 
+#### build-capture
+
+Build capture tool is designed for capturing the build process of a Makefile project. Basically, it will save all the single lines of $CC$ and re-make the project to produce all the intermediate results.
+
+That is, we can produce all the *.i files, which is a self-contained preprocessed files. Then for each *.i files, we can generate the LLVM-IR files clang. For example, 
+
+```shell
+[~/Ares/tools/example_code]$gcc -E example.c -o exmaple.i
+[~/Ares/tools/example_code]$clang-3.9 -S -emit-llvm -g example.i
+```
+
+We have provide part of build-capture result of 19 projects in evaluation_build_capture_Results folders.
+
+In theory, any projects supported by clang can be build-capture by our tool. However, clang is different from gcc. Therefore, we suggest to replace the $CC$ in Makefile by clang-3.9, such as
+
+```makefile
+CROSS_COMPILE=
+CC=$(CROSS_COMPILE)clang
+```
+
+In this way, all the *.i files can be compiled by clang to generate LLVM-IR files. 
+
+For multiple LLVM-IR files, use the following command to combine them and use as our tool,
+
+```shell
+llvm-link a.ll b.ll -o output.bc
+llvm-dis output.bc -o input4engine.ll
+```
+
+Unfortunately, build-capture tool is under the patient application process. Therefore, we cannot provide the tool here. When available, we will upload ASAP.
