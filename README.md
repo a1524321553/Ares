@@ -9,7 +9,6 @@ We present Ares, a tool for automatically inferring precise error specifications
 
 Ares is evaluated on 19 real world projects, and the specifications inferred from Ares help identify dozens of API-related bugs in well-known projects such as OpenSSL, 10 of which are confirmed or fixed. We are trying our best to apply Ares to more programs. We upload the details in [evaluation_data/new_bugs](evaluation_data/new_bugs) 
 
-Usage of our tools at [tools/Readme.md](tools/Readme.md)
 
 Ares is still under development, and contains a lot of bugs and TODO lists. Any bugs or feature requests, feel free to email us at chi-li18@mails.tsinghua.edu.cn or open issues.
 
