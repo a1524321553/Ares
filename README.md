@@ -19,7 +19,6 @@ Ares is still under development, and contains a lot of bugs and TODO lists. Any 
   - Ares evaluation result
   - APEx evaluation result
   - New bugs found by Ares
-- IMSpec used in this repository ([imspec](imspec))
 - Tools([tools](tools))
   - Ares tookit
   - build-capture
