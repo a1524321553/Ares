@@ -1,0 +1,16 @@
+digraph yyerror {
+label="yyerror"
+9261 [label="N9261\n(rp:0, ep:0)\nexit", shape="doublecircle"]
+9262 [label="N9262\n(rp:6, ep:6)\nentry", shape="doublecircle"]
+9262 -> 9264 [label="%2 = alloca i8*, align 8"]
+9264 [label="N9264\n(rp:5, ep:5)", shape="circle"]
+9264 -> 9266 [label="store i8* %0, i8** %2, align 8"]
+9266 [label="N9266\n(rp:4, ep:4)", shape="circle"]
+9266 -> 9267 [label="%3 = load i32, i32* @yylineno, align 4"]
+9267 [label="N9267\n(rp:3, ep:3)", shape="circle"]
+9267 -> 9268 [label="%4 = load i8*, i8** %2, align 8"]
+9268 [label="N9268\n(rp:2, ep:2)", shape="circle"]
+9268 -> 9269 [label="call void @warnx(i8* getelementptr inbounds ([20 x i8], [20 x i8]* @.str.2.279, i32 0, i32 0), i32 %3, i8* %4)"]
+9269 [label="N9269\n(rp:1, ep:1)", shape="circle"]
+9269 -> 9261 [label="ret void"]
+}

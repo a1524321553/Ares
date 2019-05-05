@@ -1,0 +1,8 @@
+digraph yyget_debug {
+label="yyget_debug"
+9278 [label="N9278\n(rp:0, ep:0)\nexit", shape="doublecircle"]
+9279 [label="N9279\n(rp:2, ep:2)\nentry", shape="doublecircle"]
+9279 -> 9281 [label="%1 = load i32, i32* @yy_flex_debug, align 4"]
+9281 [label="N9281\n(rp:1, ep:1)", shape="circle"]
+9281 -> 9278 [label="ret i32 %1"]
+}

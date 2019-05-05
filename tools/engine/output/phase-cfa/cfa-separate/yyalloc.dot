@@ -1,0 +1,14 @@
+digraph yyalloc {
+label="yyalloc"
+9183 [label="N9183\n(rp:0, ep:0)\nexit", shape="doublecircle"]
+9184 [label="N9184\n(rp:5, ep:5)\nentry", shape="doublecircle"]
+9184 -> 9186 [label="%2 = alloca i64, align 8"]
+9186 [label="N9186\n(rp:4, ep:4)", shape="circle"]
+9186 -> 9188 [label="store i64 %0, i64* %2, align 8"]
+9188 [label="N9188\n(rp:3, ep:3)", shape="circle"]
+9188 -> 9189 [label="%3 = load i64, i64* %2, align 8"]
+9189 [label="N9189\n(rp:2, ep:2)", shape="circle"]
+9189 -> 9190 [label="%4 = call i8* @malloc(i64 %3)"]
+9190 [label="N9190\n(rp:1, ep:1)", shape="circle"]
+9190 -> 9183 [label="ret i8* %4"]
+}

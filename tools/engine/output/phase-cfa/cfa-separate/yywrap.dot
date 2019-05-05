@@ -1,0 +1,6 @@
+digraph yywrap {
+label="yywrap"
+10996 [label="N10996\n(rp:0, ep:0)\nexit", shape="doublecircle"]
+10997 [label="N10997\n(rp:1, ep:1)\nentry", shape="doublecircle"]
+10997 -> 10996 [label="ret i32 1"]
+}
