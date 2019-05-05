@@ -34,7 +34,7 @@ We select 19 widely used projects, i.e., [keepalived](https://github.com/acassen
 
 We also test these projects on  [APEx](https://github.com/yujokang/APEx), an automically error specification inference tool.
 
-We upload the compiled IR Results of 19 projects at [evaluation_IR_Results](evaluation_data) and original results at [evaluation_data](evaluation_data).
+We upload the compiled IR Results of 19 projects at [evaluation_IR_Results](evaluation_data) and original results at [tools](tools).
 
 #### New Bugs
 
