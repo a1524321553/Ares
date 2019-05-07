@@ -20,8 +20,8 @@ Ares is still under development, and contains a lot of bugs and TODO lists. Any 
   - APEx evaluation result
   - New bugs found by Ares
 - Tools([tools](tools))
-  - Ares tookit
   - build-capture
+   - Ares tookit
 
 
 
@@ -44,28 +44,21 @@ Up to now, 10 previously unknown bugs have been confirmed by developers.
 
 |      Project      | Issue# | Error Specification
 | :---------------: | -------------------------------------: |---------:
-|      keepalived      |                             1003 | SSL\_CTX\_new, eq null
-|      keepalived       |                             1004 | SSL\_new, eq null
-|        httping        |                               41 | SSL\_CTX\_new, eq null
-|       irssi        |                               943 | BIO\_read, slt 0
-|      irssi      |                               944 | SSL\_get\_peer\_certificate, eq null
-|      sslsplit      |                               224 | SSL\_CTX\_use\_certificate, eq 0
-|     sslsplit     |                               225 | SSL\_CTX\_use\_PrivateKey, sle 0
-|   thc-ipv6   |                               28 | BN\_new, eq null
-|       openssl       |                               6567 | RAND\_bytes, sle 0
-|     openssl     |                               6973 | EVP\_MD\_CTX\_new, eq null
+|      keepalived      |                             [1003](https://github.com/acassen/keepalived/issues/1003) | SSL\_CTX\_new, eq null
+|      keepalived       |                            [1004](https://github.com/acassen/keepalived/issues/1004) | SSL\_new, eq null
+|        httping        |                            [41](https://github.com/flok99/httping/issues/41) | SSL\_CTX\_new, eq null
+|       irssi        |                               [943](https://github.com/irssi/irssi/issues/943) | BIO\_read, slt 0
+|      irssi      |                               [944](https://github.com/irssi/irssi/issues/944) | SSL\_get\_peer\_certificate, eq null
+|      sslsplit      |                               [224](https://github.com/droe/sslsplit/issues/224) | SSL\_CTX\_use\_certificate, eq 0
+|     sslsplit     |                               [225](https://github.com/droe/sslsplit/issues/225) | SSL\_CTX\_use\_PrivateKey, sle 0
+|   thc-ipv6   |                               [28](https://github.com/vanhauser-thc/thc-ipv6/issues/28) | BN\_new, eq null
+|       openssl       |                               [6567](https://github.com/openssl/openssl/issues/6567) | RAND\_bytes, sle 0
+|     openssl     |                               [6973](https://github.com/openssl/openssl/issues/6973) | EVP\_MD\_CTX\_new, eq null
 
 We upload the details  in [evaluation_data/new_bugs](evaluation_data/new_bugs) 
 
 
 ### Tools
-
-#### How to use
-
-Ares can be used with the following steps: 
-
-  - make sure that target project can be compiled by clang-3.9, then using our build-capture tool to capture its build sequence automatically. The captured results are preprocessed by expanding the macros and in-lining header files which are shown in [evaluation_build_capture_Results](evaluation_data). Then using the captured results, we can generate the corresponding IR results which are shown in [evaluation_IR_Results](evaluation_data).
-  - Trigger the major work of error specification mining. It first parses IR results into CFA and CG, then performs static analysis. Inferred specifications are written to the errspec.txt file which is shown in each project of [tools](tools).
 
 #### build-capture
 
@@ -97,3 +90,12 @@ llvm-dis output.bc -o input4engine.ll
 ```
 
 Unfortunately, build-capture tool is under the patient application process. Therefore, we cannot provide the tool here. When available, we will upload ASAP.
+
+
+#### How to use
+
+Ares can be used with the following steps: 
+
+  - make sure that target project can be compiled by clang-3.9, then using our build-capture tool to capture its build sequence automatically. The captured results are preprocessed by expanding the macros and in-lining header files which are shown in [evaluation_build_capture_Results](evaluation_data). Then using the captured results, we can generate the corresponding IR results which are shown in [evaluation_IR_Results](evaluation_data).
+  - Trigger the major work of error specification mining. It first parses IR results into CFA and CG, then performs static analysis. Inferred specifications are written to the errspec.txt file which is shown in each project of [tools](tools).
+
