@@ -67,8 +67,8 @@ Build capture tool is designed for capturing the build process of a Makefile pro
 That is, we can produce all the *.i files, which is a self-contained preprocessed files. Then for each *.i files, we can generate the LLVM-IR files clang. For example, 
 
 ```shell
-[~/Ares/tools/example_code]$gcc -E example.c -o exmaple.i
-[~/Ares/tools/example_code]$clang-3.9 -S -emit-llvm -g example.i
+$gcc -E example.c -o exmaple.i
+$clang-3.9 -S -emit-llvm -g example.i
 ```
 
 We have provide part of build-capture result of 19 projects in evaluation_build_capture_Results folders.
