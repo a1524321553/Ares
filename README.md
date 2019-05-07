@@ -97,5 +97,5 @@ Unfortunately, build-capture tool is under the patient application process. Ther
 Ares can be used with the following steps: 
 
   - make sure that target project can be compiled by clang-3.9, then using our build-capture tool to capture its build sequence automatically. The captured results are preprocessed by expanding the macros and in-lining header files which are shown in [evaluation_build_capture_Results](evaluation_data). Then using the captured results, we can generate the corresponding IR results which are shown in [evaluation_IR_Results](evaluation_data).
-  - Trigger the major work of error specification mining. It first parses IR results into CFA and CG, then performs static analysis. Inferred specifications are written to the errspec.txt file which is shown in each project of [tools](tools).
+  - Trigger the major work of error specification mining. It first parses IR results into CFA and CG, then performs static analysis. Inferred specifications are written to the errspec.txt file which is an example shown in [tools](tools).
 
