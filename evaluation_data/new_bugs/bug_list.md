@@ -11,19 +11,16 @@
 
 |      Project      | Bugs(Confirmed/Fixed) |
 | :---------------: | ---: |
-|      httping      |   1(1/0) |
 |      irssi        |  2(0/2) |
 |     keepalived     |    2(0/2) |
 |     thc-ipv6      |  1(0/1) |
 |      sslplit      |    2(0/2) |
 |       Total       | 10(1/9) |
 |      OpenSSL      |  2(0/2) |
+|      httping      |   1(1/0) |
 
 
 
-## [httping](https://github.com/flok99/httping)
-
-1. confirmed - [41](https://github.com/flok99/httping/issues/41)
 
 ## [irssi](https://github.com/irssi/irssi)
 
@@ -46,6 +43,10 @@
 
 ## [OpenSSL](https://github.com/openssl/openssl)
 
-1. fixed - [#6567: Missing error check of RAND_bytes() calls in apps/speed.c](https://github.com/openssl/openssl/issues/6567)
+1. fixed - [6567](https://github.com/openssl/openssl/issues/6567)
 
-2. fixed - [#6973: Unchecked EVP_MD_CTX_new() return value in OCSP_basic_sign()](https://github.com/openssl/openssl/issues/6973)
+2. fixed - [6973](https://github.com/openssl/openssl/issues/6973)
+
+## [httping](https://github.com/flok99/httping)
+
+1. confirmed - [41](https://github.com/flok99/httping/issues/41)
