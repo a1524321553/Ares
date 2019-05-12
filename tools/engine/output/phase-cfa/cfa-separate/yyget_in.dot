@@ -1,0 +1,8 @@
+digraph yyget_in {
+label="yyget_in"
+9282 [label="N9282\n(rp:0, ep:0)\nexit", shape="doublecircle"]
+9283 [label="N9283\n(rp:2, ep:2)\nentry", shape="doublecircle"]
+9283 -> 9285 [label="%1 = load %struct._IO_FILE*, %struct._IO_FILE** @yyin, align 8"]
+9285 [label="N9285\n(rp:1, ep:1)", shape="circle"]
+9285 -> 9282 [label="ret %struct._IO_FILE* %1"]
+}

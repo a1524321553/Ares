@@ -1,0 +1,18 @@
+digraph yy_scan_string {
+label="yy_scan_string"
+9013 [label="N9013\n(rp:0, ep:0)\nexit", shape="doublecircle"]
+9014 [label="N9014\n(rp:7, ep:7)\nentry", shape="doublecircle"]
+9014 -> 9016 [label="%2 = alloca i8*, align 8"]
+9016 [label="N9016\n(rp:6, ep:6)", shape="circle"]
+9016 -> 9018 [label="store i8* %0, i8** %2, align 8"]
+9018 [label="N9018\n(rp:5, ep:5)", shape="circle"]
+9018 -> 9019 [label="%3 = load i8*, i8** %2, align 8"]
+9019 [label="N9019\n(rp:4, ep:4)", shape="circle"]
+9019 -> 9020 [label="%4 = load i8*, i8** %2, align 8"]
+9020 [label="N9020\n(rp:3, ep:3)", shape="circle"]
+9020 -> 9021 [label="%5 = call i64 @strlen(i8* %4)"]
+9021 [label="N9021\n(rp:2, ep:2)", shape="circle"]
+9021 -> 9022 [label="yy_scan_bytes --@-- %6 = call %struct.yy_buffer_state* @yy_scan_bytes(i8* %3, i64 %5)", style="dashed", color="blue"]
+9022 [label="N9022\n(rp:1, ep:1)", shape="circle"]
+9022 -> 9013 [label="ret %struct.yy_buffer_state* %6"]
+}

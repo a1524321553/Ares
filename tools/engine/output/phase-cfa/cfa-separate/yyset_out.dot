@@ -1,0 +1,14 @@
+digraph yyset_out {
+label="yyset_out"
+10988 [label="N10988\n(rp:0, ep:0)\nexit", shape="doublecircle"]
+10989 [label="N10989\n(rp:5, ep:5)\nentry", shape="doublecircle"]
+10989 -> 10991 [label="%2 = alloca %struct._IO_FILE*, align 8"]
+10991 [label="N10991\n(rp:4, ep:4)", shape="circle"]
+10991 -> 10993 [label="store %struct._IO_FILE* %0, %struct._IO_FILE** %2, align 8"]
+10993 [label="N10993\n(rp:3, ep:3)", shape="circle"]
+10993 -> 10994 [label="%3 = load %struct._IO_FILE*, %struct._IO_FILE** %2, align 8"]
+10994 [label="N10994\n(rp:2, ep:2)", shape="circle"]
+10994 -> 10995 [label="store %struct._IO_FILE* %3, %struct._IO_FILE** @yyout, align 8"]
+10995 [label="N10995\n(rp:1, ep:1)", shape="circle"]
+10995 -> 10988 [label="ret void"]
+}

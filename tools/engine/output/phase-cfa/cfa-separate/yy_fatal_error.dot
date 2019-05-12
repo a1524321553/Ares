@@ -1,0 +1,18 @@
+digraph yy_fatal_error {
+label="yy_fatal_error"
+8053 [label="N8053\n(rp:0, ep:0)\nexit", shape="doublecircle"]
+8054 [label="N8054\n(rp:7, ep:7)\nentry", shape="doublecircle"]
+8054 -> 8056 [label="%2 = alloca i8*, align 8"]
+8056 [label="N8056\n(rp:6, ep:6)", shape="circle"]
+8056 -> 8058 [label="store i8* %0, i8** %2, align 8"]
+8058 [label="N8058\n(rp:5, ep:5)", shape="circle"]
+8058 -> 8059 [label="%3 = load %struct._IO_FILE*, %struct._IO_FILE** @stderr, align 8"]
+8059 [label="N8059\n(rp:4, ep:4)", shape="circle"]
+8059 -> 8060 [label="%4 = load i8*, i8** %2, align 8"]
+8060 [label="N8060\n(rp:3, ep:3)", shape="circle"]
+8060 -> 8061 [label="%5 = call i32 @fprintf(%struct._IO_FILE* %3, i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.10, i32 0, i32 0), i8* %4)"]
+8061 [label="N8061\n(rp:2, ep:2)", shape="circle"]
+8061 -> 8062 [label="call void @exit(i32 2)"]
+8062 [label="N8062\n(rp:1, ep:1)", shape="circle"]
+8062 -> 8053 [label="unreachable"]
+}

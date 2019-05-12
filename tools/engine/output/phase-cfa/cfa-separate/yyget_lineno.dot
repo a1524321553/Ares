@@ -1,0 +1,8 @@
+digraph yyget_lineno {
+label="yyget_lineno"
+9290 [label="N9290\n(rp:0, ep:0)\nexit", shape="doublecircle"]
+9291 [label="N9291\n(rp:2, ep:2)\nentry", shape="doublecircle"]
+9291 -> 9293 [label="%1 = load i32, i32* @yylineno, align 4"]
+9293 [label="N9293\n(rp:1, ep:1)", shape="circle"]
+9293 -> 9290 [label="ret i32 %1"]
+}

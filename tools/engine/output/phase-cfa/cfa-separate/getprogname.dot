@@ -1,0 +1,8 @@
+digraph getprogname {
+label="getprogname"
+3094 [label="N3094\n(rp:0, ep:0)\nexit", shape="doublecircle"]
+3095 [label="N3095\n(rp:2, ep:2)\nentry", shape="doublecircle"]
+3095 -> 3097 [label="%1 = load i8*, i8** @program_invocation_short_name, align 8"]
+3097 [label="N3097\n(rp:1, ep:1)", shape="circle"]
+3097 -> 3094 [label="ret i8* %1"]
+}

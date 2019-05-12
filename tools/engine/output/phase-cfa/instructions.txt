@@ -1,0 +1,16 @@
+AllocaInst
+BinaryOperator
+BitCastInst
+CallInst
+GetElementPtrInst
+ICmpInst
+LoadInst
+PhiNode
+PtrToIntInst
+ReturnInst
+SExtInst
+SelectInst
+StoreInst
+TruncInst
+UnreachableInst
+ZExtInst
