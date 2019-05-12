@@ -1,8 +1,0 @@
-digraph yyget_leng {
-label="yyget_leng"
-9286 [label="N9286\n(rp:0, ep:0)\nexit", shape="doublecircle"]
-9287 [label="N9287\n(rp:2, ep:2)\nentry", shape="doublecircle"]
-9287 -> 9289 [label="%1 = load i64, i64* @yyleng, align 8"]
-9289 [label="N9289\n(rp:1, ep:1)", shape="circle"]
-9289 -> 9286 [label="ret i64 %1"]
-}
