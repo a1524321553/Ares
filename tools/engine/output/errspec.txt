@@ -1,5 +1,5 @@
 add_host,eq -1
-add_recp,ne 0,ne 0
+add_recp,ne 0
 fchmod,ne 0
 fchown,ne 0
 ferror,ne 0
