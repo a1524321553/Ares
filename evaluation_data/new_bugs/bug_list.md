@@ -15,9 +15,9 @@
 |     keepalived     |    2(0/2) |
 |     thc-ipv6      |  1(0/1) |
 |      sslplit      |    2(0/2) |
-|       Total       | 10(1/9) |
 |      OpenSSL      |  2(0/2) |
 |      httping      |   1(1/0) |
+|       Total       | 10(1/9) |
 
 
 
